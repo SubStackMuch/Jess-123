@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🐐 Happy Birthday, Jess! 🎀</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(145deg, #ffe4ec 0%, #ffb6c1 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Segoe UI', 'Quicksand', system-ui, sans-serif;
+      overflow-x: hidden;
+      overflow-y: auto;
+      position: relative;
+      padding: 1rem 0;
+    }
+
+    .floating {
+      position: fixed;
+      pointer-events: none;
+      font-size: 2rem;
+      opacity: 0.5;
+      animation: floatUp 8s infinite linear;
+      z-index: 0;
+    }
+
+    @keyframes floatUp {
+      0% { transform: translateY(110vh) rotate(0deg); opacity: 0.5; }
+      100% { transform: translateY(-20vh) rotate(360deg); opacity: 0; }
+    }
+
+    .card {
+      position: relative;
+      background: rgba(255, 240, 245, 0.92);
+      backdrop-filter: blur(6px);
+      width: 92%;
+      max-width: 720px;
+      padding: 2rem 2rem 2.5rem;
+      border-radius: 70px 70px 70px 70px / 60px 60px 60px 60px;
+      box-shadow: 0 25px 40px rgba(255, 105, 180, 0.4), 0 0 0 8px #fff0f5, 0 0 0 12px #ffb6c1;
+      border: 2px dashed #ff69b4;
+      text-align: center;
+      z-index: 10;
+      transition: transform 0.3s ease;
+      animation: cardPop 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      margin: 1rem 0;
+    }
+
+    @keyframes cardPop {
+      0% { transform: scale(0.7); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: #d43f6b;
+      text-shadow: 3px 3px 0 #ffb6c1, 5px 5px 0 rgba(255, 105, 180, 0.3);
+      letter-spacing: 2px;
+      margin-bottom: 0.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 0.3rem;
+      animation: glowPulse 2s infinite alternate;
+    }
+
+    @keyframes glowPulse {
+      0% { text-shadow: 3px 3px 0 #ffb6c1, 5px 5px 0 rgba(255, 105, 180, 0.3); }
+      100% { text-shadow: 5px 5px 0 #ffc0cb, 8px 8px 0 rgba(255, 20, 147, 0.3); }
+    }
+
+    .sub-love {
+      font-size: 1.3rem;
+      color: #c71585;
+      font-weight: 600;
+      letter-spacing: 1px;
+      margin-bottom: 1.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .goat-stage {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      gap: 1.2rem;
+      margin: 0.5rem 0 1.8rem;
+      position: relative;
+      flex-wrap: wrap;
+    }
+
+    .goat {
+      transition: all 0.2s;
+      animation: bounce 1.8s infinite ease-in-out;
+      display: inline-block;
+      line-height: 1;
+      transform-origin: bottom;
+      position: relative;
+    }
+
+    .goat:nth-child(1) { animation-delay: 0s; }
+    .goat:nth-child(2) { animation-delay: 0.3s; }
+    .goat:nth-child(3) { animation-delay: 0.6s; }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0) scale(1); }
+      50% { transform: translateY(-18px) scale(1.03); }
+    }
+
+    .heart-flower-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.8rem;
+      font-size: 2.5rem;
+      margin: 1rem 0 0.5rem;
+      flex-wrap: wrap;
+      filter: drop-shadow(0 4px 4px rgba(255, 182, 193, 0.6));
+    }
+
+    .heart-flower-row span {
+      display: inline-block;
+      animation: twinkle 2.2s infinite alternate;
+    }
+
+    .heart-flower-row span:nth-child(2) { animation-delay: 0.4s; }
+    .heart-flower-row span:nth-child(3) { animation-delay: 0.8s; }
+    .heart-flower-row span:nth-child(4) { animation-delay: 1.2s; }
+    .heart-flower-row span:nth-child(5) { animation-delay: 0.2s; }
+    .heart-flower-row span:nth-child(6) { animation-delay: 0.9s; }
+    .heart-flower-row span:nth-child(7) { animation-delay: 0.5s; }
+
+    @keyframes twinkle {
+      0% { transform: scale(1) rotate(0deg); opacity: 0.9; }
+      100% { transform: scale(1.3) rotate(8deg); opacity: 1; text-shadow: 0 0 12px #ff69b4; }
+    }
+
+    .message {
+      background: rgba(255, 255, 255, 0.6);
+      border-radius: 60px;
+      padding: 1rem 1.8rem;
+      margin: 1rem auto 0;
+      max-width: 500px;
+      border: 2px solid #ffb6c1;
+      box-shadow: inset 0 2px 8px rgba(255, 105, 180, 0.1);
+      color: #a13d63;
+      font-size: 1.3rem;
+      font-weight: 500;
+      line-height: 1.5;
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+
+    .message .small-hearts {
+      font-size: 1.7rem;
+      letter-spacing: 0.5rem;
+      color: #ff1493;
+      margin-top: 0.3rem;
+    }
+
+    .heart-animation {
+      display: inline-block;
+      animation: heartBeat 1.5s infinite;
+    }
+
+    @keyframes heartBeat {
+      0% { transform: scale(1); }
+      25% { transform: scale(1.2); }
+      40% { transform: scale(1); }
+      60% { transform: scale(1.15); }
+      100% { transform: scale(1); }
+    }
+
+    .footer-goat {
+      margin-top: 0.8rem;
+      font-size: 2.6rem;
+      display: flex;
+      justify-content: center;
+      gap: 0.6rem;
+      opacity: 0.9;
+      align-items: center;
+    }
+
+    .goat-svg {
+      width: 120px;
+      height: auto;
+      filter: drop-shadow(0 10px 8px rgba(199, 21, 133, 0.15));
+      transition: filter 0.3s ease;
+    }
+
+    .goat:nth-child(1) .goat-svg { width: 105px; }
+    .goat:nth-child(2) .goat-svg { width: 130px; }
+    .goat:nth-child(3) .goat-svg { width: 100px; }
+
+    .goat:hover .goat-svg {
+      filter: drop-shadow(0 0 15px #ff69b4) drop-shadow(0 8px 6px rgba(199, 21, 133, 0.3));
+    }
+
+    .plan-section {
+      margin: 1.8rem auto 0.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .click-me-btn {
+      background: linear-gradient(135deg, #ff69b4, #ff1493);
+      color: white;
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      padding: 0.9rem 2.5rem;
+      border: none;
+      border-radius: 60px;
+      cursor: pointer;
+      box-shadow: 0 8px 0 #c71585, 0 12px 20px rgba(255, 105, 180, 0.5);
+      transition: all 0.15s ease;
+      font-family: inherit;
+      animation: btnPulse 1.8s infinite alternate;
+      position: relative;
+      z-index: 5;
+    }
+
+    .click-me-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 11px 0 #c71585, 0 16px 25px rgba(255, 105, 180, 0.6);
+      background: linear-gradient(135deg, #ff85c8, #ff3d9a);
+    }
+
+    .click-me-btn:active {
+      transform: translateY(5px);
+      box-shadow: 0 3px 0 #c71585, 0 6px 12px rgba(255, 105, 180, 0.4);
+    }
+
+    @keyframes btnPulse {
+      0% { box-shadow: 0 8px 0 #c71585, 0 12px 20px rgba(255, 105, 180, 0.5); }
+      100% { box-shadow: 0 8px 0 #c71585, 0 12px 30px rgba(255, 20, 147, 0.8); }
+    }
+
+    .plan-reveal {
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: max-height 0.8s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.6s ease 0.1s, margin 0.4s ease, padding 0.4s ease;
+      width: 100%;
+      max-width: 580px;
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 40px;
+      border: 2px solid #ffb6c1;
+      box-shadow: inset 0 2px 10px rgba(255, 105, 180, 0.1), 0 8px 20px rgba(255, 105, 180, 0.2);
+      margin-top: 0;
+      padding: 0 1.5rem;
+    }
+
+    .plan-reveal.open {
+      max-height: 2500px;
+      opacity: 1;
+      margin-top: 1rem;
+      padding: 1.5rem 1.5rem;
+    }
+
+    .plan-inner {
+      text-align: left;
+      color: #a13d63;
+      font-size: 1.05rem;
+      line-height: 1.5;
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+    }
+
+    .plan-inner h2 {
+      font-size: 1.7rem;
+      color: #c71585;
+      text-align: center;
+      margin-bottom: 0.2rem;
+      letter-spacing: 1px;
+    }
+
+    .plan-divider {
+      text-align: center;
+      color: #ff69b4;
+      font-weight: 700;
+      letter-spacing: 3px;
+      font-size: 0.9rem;
+      margin: 0.2rem 0;
+      opacity: 0.7;
+    }
+
+    .plan-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.7rem;
+      background: rgba(255, 240, 245, 0.9);
+      padding: 0.65rem 1rem;
+      border-radius: 30px;
+      border: 1px dashed #ffb6c1;
+      animation: planFadeIn 0.4s ease forwards;
+      opacity: 0;
+      transform: translateX(-8px);
+    }
+
+    .plan-reveal.open .plan-item { animation: planFadeIn 0.5s ease forwards; }
+    .plan-reveal.open .plan-item:nth-child(1) { animation-delay: 0.05s; }
+    .plan-reveal.open .plan-item:nth-child(2) { animation-delay: 0.10s; }
+    .plan-reveal.open .plan-item:nth-child(3) { animation-delay: 0.15s; }
+    .plan-reveal.open .plan-item:nth-child(4) { animation-delay: 0.20s; }
+    .plan-reveal.open .plan-item:nth-child(5) { animation-delay: 0.25s; }
+    .plan-reveal.open .plan-item:nth-child(6) { animation-delay: 0.30s; }
+    .plan-reveal.open .plan-item:nth-child(7) { animation-delay: 0.35s; }
+    .plan-reveal.open .plan-item:nth-child(8) { animation-delay: 0.40s; }
+    .plan-reveal.open .plan-item:nth-child(9) { animation-delay: 0.45s; }
+    .plan-reveal.open .plan-item:nth-child(10) { animation-delay: 0.50s; }
+    .plan-reveal.open .plan-item:nth-child(11) { animation-delay: 0.55s; }
+    .plan-reveal.open .plan-item:nth-child(12) { animation-delay: 0.60s; }
+
+    @keyframes planFadeIn {
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    .plan-icon {
+      font-size: 1.4rem;
+      flex-shrink: 0;
+      margin-top: 0.05rem;
+    }
+
+    .plan-text { flex: 1; }
+
+    .plan-text strong {
+      color: #c71585;
+      font-weight: 700;
+      display: block;
+      margin-bottom: 0.1rem;
+    }
+
+    .plan-text .time { font-weight: 700; color: #d43f6b; }
+    .plan-text .desc { font-size: 0.95rem; color: #b04a6e; }
+
+    .plan-text .link {
+      font-size: 0.85rem;
+      color: #ff1493;
+      word-break: break-all;
+      text-decoration: underline;
+      display: inline-block;
+      margin-top: 0.15rem;
+    }
+
+    .plan-sub {
+      margin-left: 2rem;
+      font-size: 0.95rem;
+      color: #b04a6e;
+      background: rgba(255, 240, 245, 0.7);
+      padding: 0.4rem 0.8rem;
+      border-radius: 20px;
+      border-left: 3px solid #ff69b4;
+    }
+
+    .plan-sub .opt { font-weight: 700; color: #c71585; }
+
+    .plan-note {
+      font-size: 1rem;
+      color: #d45d8a;
+      text-align: center;
+      margin-top: 0.6rem;
+      font-style: italic;
+      border-top: 1px dashed #ffb6c1;
+      padding-top: 0.8rem;
+    }
+
+    @media (max-width: 550px) {
+      .card { padding: 1.5rem 0.9rem; border-radius: 50px; }
+      h1 { font-size: 2.2rem; }
+      .sub-love { font-size: 1rem; }
+      .goat-svg { width: 80px !important; }
+      .goat:nth-child(2) .goat-svg { width: 95px !important; }
+      .heart-flower-row { font-size: 2rem; gap: 0.5rem; }
+      .message { font-size: 1.1rem; padding: 0.8rem 1rem; }
+      .footer-goat { font-size: 2rem; }
+      .click-me-btn { font-size: 1.2rem; padding: 0.8rem 1.8rem; }
+      .plan-reveal { padding: 0 1rem; }
+      .plan-reveal.open { padding: 1rem 1rem; }
+      .plan-inner { font-size: 0.95rem; }
+      .plan-inner h2 { font-size: 1.4rem; }
+      .plan-item { padding: 0.5rem 0.7rem; gap: 0.5rem; }
+      .plan-icon { font-size: 1.2rem; }
+      .plan-sub { margin-left: 0.8rem; font-size: 0.9rem; }
+    }
+  </style>
+</head>
+<body>
+  <div id="floating-container"></div>
+
+  <div class="card">
+    <h1>
+      <span>🎂</span> Happy Birthday, Jess <span>🎂</span>
+    </h1>
+    <div class="sub-love">
+      <span>💖</span> to my favorite person <span>💖</span>
+    </div>
+
+    <!-- Realistic baby goats -->
+    <div class="goat-stage">
+      <!-- Goat 1: white baby goat with pink bow -->
+      <div class="goat" aria-label="realistic baby goat">
+        <svg class="goat-svg" viewBox="0 0 200 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="100" cy="160" rx="55" ry="40" fill="#fef7f0" stroke="#e8d5c8" stroke-width="2"/>
+          <ellipse cx="100" cy="165" rx="48" ry="32" fill="#fffaf5"/>
+          <rect x="68" y="190" width="14" height="28" rx="6" fill="#f5ebe0" stroke="#e0cdbf" stroke-width="1.5"/>
+          <rect x="118" y="190" width="14" height="28" rx="6" fill="#f5ebe0" stroke="#e0cdbf" stroke-width="1.5"/>
+          <rect x="82" y="192" width="12" height="26" rx="5" fill="#faf3ec" stroke="#e0cdbf" stroke-width="1.5"/>
+          <rect x="106" y="192" width="12" height="26" rx="5" fill="#faf3ec" stroke="#e0cdbf" stroke-width="1.5"/>
+          <rect x="68" y="212" width="14" height="8" rx="3" fill="#d4b8a8"/>
+          <rect x="118" y="212" width="14" height="8" rx="3" fill="#d4b8a8"/>
+          <rect x="82" y="212" width="12" height="8" rx="3" fill="#e0cdbf"/>
+          <rect x="106" y="212" width="12" height="8" rx="3" fill="#e0cdbf"/>
+          <ellipse cx="100" cy="105" rx="42" ry="38" fill="#fef7f0" stroke="#e8d5c8" stroke-width="2"/>
+          <ellipse cx="100" cy="110" rx="36" ry="30" fill="#fffaf5"/>
+          <ellipse cx="62" cy="88" rx="18" ry="10" transform="rotate(-25 62 88)" fill="#f5ebe0" stroke="#e0cdbf" stroke-width="1.5"/>
+          <ellipse cx="138" cy="88" rx="18" ry="10" transform="rotate(25 138 88)" fill="#f5ebe0" stroke="#e0cdbf" stroke-width="1.5"/>
+          <ellipse cx="62" cy="88" rx="12" ry="6" transform="rotate(-25 62 88)" fill="#ffd9e0"/>
+          <ellipse cx="138" cy="88" rx="12" ry="6" transform="rotate(25 138 88)" fill="#ffd9e0"/>
+          <ellipse cx="82" cy="68" rx="6" ry="10" transform="rotate(-15 82 68)" fill="#e0cdbf" stroke="#d4b8a8" stroke-width="1"/>
+          <ellipse cx="118" cy="68" rx="6" ry="10" transform="rotate(15 118 68)" fill="#e0cdbf" stroke="#d4b8a8" stroke-width="1"/>
+          <ellipse cx="84" cy="100" rx="7" ry="8" fill="#4a3728"/>
+          <ellipse cx="116" cy="100" rx="7" ry="8" fill="#4a3728"/>
+          <ellipse cx="86" cy="98" rx="2.5" ry="3" fill="white"/>
+          <ellipse cx="118" cy="98" rx="2.5" ry="3" fill="white"/>
+          <ellipse cx="100" cy="120" rx="10" ry="6" fill="#ffc0cb"/>
+          <ellipse cx="96" cy="119" rx="2" ry="2" fill="#d48a9b"/>
+          <ellipse cx="104" cy="119" rx="2" ry="2" fill="#d48a9b"/>
+          <path d="M93 128 Q100 134 107 128" stroke="#d48a9b" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          <g transform="translate(100, 60)">
+            <path d="M-12 -4 Q-20 -12 -16 -18 Q-10 -20 -6 -12 L-4 -6 Z" fill="#ff69b4"/>
+            <path d="M12 -4 Q20 -12 16 -18 Q10 -20 6 -12 L4 -6 Z" fill="#ff69b4"/>
+            <circle cx="0" cy="-8" r="4" fill="#ff1493"/>
+          </g>
+        </svg>
+      </div>
+
+      <!-- Goat 2: light brown baby goat with heart -->
+      <div class="goat" aria-label="realistic baby goat with heart">
+        <svg class="goat-svg" viewBox="0 0 220 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="110" cy="175" rx="60" ry="42" fill="#f0dcc8" stroke="#d4b8a0" stroke-width="2"/>
+          <ellipse cx="110" cy="180" rx="52" ry="34" fill="#f7e8d8"/>
+          <rect x="74" y="205" width="15" height="30" rx="7" fill="#e8d0b8" stroke="#c9a882" stroke-width="1.5"/>
+          <rect x="128" y="205" width="15" height="30" rx="7" fill="#e8d0b8" stroke="#c9a882" stroke-width="1.5"/>
+          <rect x="90" y="208" width="13" height="28" rx="6" fill="#f2ddc8" stroke="#c9a882" stroke-width="1.5"/>
+          <rect x="118" y="208" width="13" height="28" rx="6" fill="#f2ddc8" stroke="#c9a882" stroke-width="1.5"/>
+          <rect x="74" y="230" width="15" height="8" rx="3" fill="#b8956e"/>
+          <rect x="128" y="230" width="15" height="8" rx="3" fill="#b8956e"/>
+          <rect x="90" y="232" width="13" height="8" rx="3" fill="#c9a882"/>
+          <rect x="118" y="232" width="13" height="8" rx="3" fill="#c9a882"/>
+          <ellipse cx="110" cy="115" rx="46" ry="40" fill="#f0dcc8" stroke="#d4b8a0" stroke-width="2"/>
+          <ellipse cx="110" cy="120" rx="40" ry="32" fill="#f7e8d8"/>
+          <ellipse cx="68" cy="96" rx="20" ry="11" transform="rotate(-30 68 96)" fill="#e8d0b8" stroke="#c9a882" stroke-width="1.5"/>
+          <ellipse cx="152" cy="96" rx="20" ry="11" transform="rotate(30 152 96)" fill="#e8d0b8" stroke="#c9a882" stroke-width="1.5"/>
+          <ellipse cx="68" cy="96" rx="13" ry="7" transform="rotate(-30 68 96)" fill="#ffd9e0"/>
+          <ellipse cx="152" cy="96" rx="13" ry="7" transform="rotate(30 152 96)" fill="#ffd9e0"/>
+          <ellipse cx="90" cy="76" rx="7" ry="11" transform="rotate(-12 90 76)" fill="#e0c8b0" stroke="#c9a882" stroke-width="1"/>
+          <ellipse cx="130" cy="76" rx="7" ry="11" transform="rotate(12 130 76)" fill="#e0c8b0" stroke="#c9a882" stroke-width="1"/>
+          <ellipse cx="92" cy="110" rx="8" ry="9" fill="#4a3728"/>
+          <ellipse cx="128" cy="110" rx="8" ry="9" fill="#4a3728"/>
+          <ellipse cx="94" cy="107" rx="3" ry="3.5" fill="white"/>
+          <ellipse cx="130" cy="107" rx="3" ry="3.5" fill="white"/>
+          <ellipse cx="110" cy="132" rx="11" ry="7" fill="#ffb6c1"/>
+          <ellipse cx="106" cy="131" rx="2.5" ry="2.5" fill="#d48a9b"/>
+          <ellipse cx="114" cy="131" rx="2.5" ry="2.5" fill="#d48a9b"/>
+          <path d="M102 141 Q110 148 118 141" stroke="#d48a9b" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+          <g transform="translate(160, 60)">
+            <path d="M0 6 C-10 -6 -20 -2 -10 8 C-5 14 0 18 0 18 C0 18 5 14 10 8 C20 -2 10 -6 0 6 Z" fill="#ff69b4" opacity="0.85"/>
+          </g>
+        </svg>
+      </div>
+
+      <!-- Goat 3: white baby goat with flower -->
+      <div class="goat" aria-label="realistic baby goat">
+        <svg class="goat-svg" viewBox="0 0 200 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="100" cy="160" rx="53" ry="38" fill="#fef7f0" stroke="#e8d5c8" stroke-width="2"/>
+          <ellipse cx="100" cy="165" rx="46" ry="30" fill="#fffaf5"/>
+          <rect x="69" y="188" width="13" height="28" rx="6" fill="#f5ebe0" stroke="#e0cdbf" stroke-width="1.5"/>
+          <rect x="118" y="188" width="13" height="28" rx="6" fill="#f5ebe0" stroke="#e0cdbf" stroke-width="1.5"/>
+          <rect x="83" y="190" width="11" height="26" rx="5" fill="#faf3ec" stroke="#e0cdbf" stroke-width="1.5"/>
+          <rect x="106" y="190" width="11" height="26" rx="5" fill="#faf3ec" stroke="#e0cdbf" stroke-width="1.5"/>
+          <rect x="69" y="210" width="13" height="8" rx="3" fill="#d4b8a8"/>
+          <rect x="118" y="210" width="13" height="8" rx="3" fill="#d4b8a8"/>
+          <rect x="83" y="210" width="11" height="8" rx="3" fill="#e0cdbf"/>
+          <rect x="106" y="210" width="11" height="8" rx="3" fill="#e0cdbf"/>
+          <ellipse cx="100" cy="103" rx="40" ry="36" fill="#fef7f0" stroke="#e8d5c8" stroke-width="2"/>
+          <ellipse cx="100" cy="108" rx="34" ry="28" fill="#fffaf5"/>
+          <ellipse cx="64" cy="86" rx="17" ry="9" transform="rotate(-25 64 86)" fill="#f5ebe0" stroke="#e0cdbf" stroke-width="1.5"/>
+          <ellipse cx="136" cy="86" rx="17" ry="9" transform="rotate(25 136 86)" fill="#f5ebe0" stroke="#e0cdbf" stroke-width="1.5"/>
+          <ellipse cx="64" cy="86" rx="11" ry="5.5" transform="rotate(-25 64 86)" fill="#ffd9e0"/>
+          <ellipse cx="136" cy="86" rx="11" ry="5.5" transform="rotate(25 136 86)" fill="#ffd9e0"/>
+          <ellipse cx="84" cy="68" rx="5" ry="9" transform="rotate(-15 84 68)" fill="#e0cdbf" stroke="#d4b8a8" stroke-width="1"/>
+          <ellipse cx="116" cy="68" rx="5" ry="9" transform="rotate(15 116 68)" fill="#e0cdbf" stroke="#d4b8a8" stroke-width="1"/>
+          <ellipse cx="85" cy="98" rx="6.5" ry="7.5" fill="#4a3728"/>
+          <ellipse cx="115" cy="98" rx="6.5" ry="7.5" fill="#4a3728"/>
+          <ellipse cx="87" cy="96" rx="2.5" ry="3" fill="white"/>
+          <ellipse cx="117" cy="96" rx="2.5" ry="3" fill="white"/>
+          <ellipse cx="100" cy="118" rx="9" ry="5.5" fill="#ffc0cb"/>
+          <ellipse cx="96.5" cy="117" rx="2" ry="2" fill="#d48a9b"/>
+          <ellipse cx="103.5" cy="117" rx="2" ry="2" fill="#d48a9b"/>
+          <path d="M94 126 Q100 132 106 126" stroke="#d48a9b" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          <g transform="translate(55, 72)">
+            <circle cx="0" cy="-6" r="4" fill="#ffb6c1"/>
+            <circle cx="6" cy="0" r="4" fill="#ffb6c1"/>
+            <circle cx="0" cy="6" r="4" fill="#ffb6c1"/>
+            <circle cx="-6" cy="0" r="4" fill="#ffb6c1"/>
+            <circle cx="0" cy="0" r="3" fill="#ff69b4"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+
+    <div class="heart-flower-row">
+      <span>🌸</span>
+      <span>💗</span>
+      <span>🌼</span>
+      <span>💖</span>
+      <span>🌺</span>
+      <span>💕</span>
+      <span>🌷</span>
+    </div>
+
+    <div class="message">
+      <span>You make my heart smile every day.</span>
+      <span>Happy Birthday, my love! 🎀</span>
+      <div class="small-hearts">
+        <span class="heart-animation">❤️</span>
+        <span class="heart-animation">💖</span>
+        <span class="heart-animation">❤️</span>
+      </div>
+    </div>
+
+    <!-- INTERACTIVE CLICK ME BUTTON & PLAN REVEAL -->
+    <div class="plan-section">
+      <button class="click-me-btn" id="clickMeBtn" aria-expanded="false" aria-controls="planReveal">
+        Click Me 💌
+      </button>
+
+      <div class="plan-reveal" id="planReveal">
+        <div class="plan-inner">
+          <h2>❤️ Jess' Birthday Itinerary ❤️</h2>
+
+          <div class="plan-item">
+            <span class="plan-icon">🥐</span>
+            <div class="plan-text">
+              <strong><span class="time">10:00–11:00</span> · Borough Market</strong>
+              <span class="desc">Start the day exploring Borough Market and enjoying the atmosphere.</span>
+            </div>
+          </div>
+
+          <div class="plan-item">
+            <span class="plan-icon">🥂</span>
+            <div class="plan-text">
+              <strong><span class="time">13:00–14:00</span> · Brunch</strong>
+              <span class="desc">Time for a lovely brunch together.</span>
+            </div>
+          </div>
+
+          <div class="plan-item">
+            <span class="plan-icon">🚶🏽‍♂️</span>
+            <div class="plan-text">
+              <strong><span class="time">14:00–15:30</span> · Walk &amp; Explore</strong>
+              <span class="desc">Enjoy a relaxed walk together before the afternoon activity.</span>
+            </div>
+          </div>
+
+          <div class="plan-item">
+            <span class="plan-icon">🎮</span>
+            <div class="plan-text">
+              <strong><span class="time">16:00</span> · Activate — Oxford Street</strong>
+              <span class="desc">Interactive games, challenges and a little friendly competition.</span>
+              <a class="link" href="https://playactivate.co.uk/oxford-street" target="_blank" rel="noopener">playactivate.co.uk/oxford-street</a>
+            </div>
+          </div>
+
+          <div class="plan-item">
+            <span class="plan-icon">🥂</span>
+            <div class="plan-text">
+              <strong>Pre-Dinner Drinks · Choose Your Vibe</strong>
+              <span class="desc">A rooftop moment before dinner — pick your favourite.</span>
+            </div>
+          </div>
+
+          <div class="plan-sub">
+            <span class="opt">Option A</span> — Circe's, Waterloo · Rooftop drinks and beautiful views.<br>
+            <a class="link" href="https://www.circesrooftop.co.uk/bookings/" target="_blank" rel="noopener">circesrooftop.co.uk/bookings</a>
+          </div>
+
+          <div class="plan-sub">
+            <span class="opt">Option B</span> — <em>(to be confirmed)</em>
+          </div>
+
+          <div class="plan-item">
+            <span class="plan-icon">🍽️</span>
+            <div class="plan-text">
+              <strong>Dinner · Birthday Dinner</strong>
+              <span class="desc">A lovely dinner to celebrate your birthday properly. ❤️</span>
+            </div>
+          </div>
+
+          <div class="plan-item">
+            <span class="plan-icon">🪩</span>
+            <div class="plan-text">
+              <strong>Evening · 2001 Club</strong>
+              <span class="desc">Finish the night with music, drinks and dancing.</span>
+            </div>
+          </div>
+
+          <div class="plan-divider">━━━━━━━━━━━━━━</div>
+
+          <div class="plan-note">
+            💕 A full day of good food, fun, romance and music — all about you. ❤️
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-goat">
+      <span>🌼</span>
+      <span>🐐</span>
+      <span>🌸</span>
+      <span>🐐</span>
+      <span>🌺</span>
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      const emojis = ['💗', '🌸', '💖', '🌼', '💕', '🌺', '💘', '🌷', '💝', '🌸', '💞', '🌻', '🎀', '💓', '🌹', '💐'];
+
+      const container = document.getElementById('floating-container');
+      const count = 28;
+
+      for (let i = 0; i < count; i++) {
+        const el = document.createElement('div');
+        el.classList.add('floating');
+        el.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+
+        const size = 1.2 + Math.random() * 2;
+        el.style.fontSize = size + 'rem';
+        el.style.left = Math.random() * 100 + '%';
+
+        const duration = 6 + Math.random() * 12;
+        el.style.animationDuration = duration + 's';
+        el.style.animationDelay = -(Math.random() * duration) + 's';
+        el.style.opacity = 0.2 + Math.random() * 0.4;
+
+        container.appendChild(el);
+      }
+
+      const goats = document.querySelectorAll('.goat');
+      goats.forEach((goat) => {
+        goat.addEventListener('mouseenter', () => { goat.style.animationDuration = '0.6s'; });
+        goat.addEventListener('mouseleave', () => { goat.style.animationDuration = '1.8s'; });
+      });
+
+      const clickMeBtn = document.getElementById('clickMeBtn');
+      const planReveal = document.getElementById('planReveal');
+
+      clickMeBtn.addEventListener('click', () => {
+        const isOpen = planReveal.classList.toggle('open');
+        clickMeBtn.setAttribute('aria-expanded', isOpen);
+        clickMeBtn.textContent = isOpen ? 'Close Plan 🙈' : 'Click Me 💌';
+      });
+    })();
+  </script>
+</body>
+</html>
